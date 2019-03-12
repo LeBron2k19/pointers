@@ -22,15 +22,23 @@ void myswap(int *ptr1, int *ptr2)
 
 int main()
 {
-  int a = 25, b = 11;    
+  int a = 25, b = 11;   
+
+
+  int *pointA;
+  int *pointB;
+  
+  pointA = &a;
+  pointB = &b;     //Enables use of either (&a, &b) or (pointA, pointB)
+ 
 
   cout << "What am I doing wrong ☹ \n\n";
 
   cout << "Before Swap: a = "<< a <<", b = " << b <<endl <<endl;
 
-				//swap(a,b); //why does theirs work????   
  
-  myswap(&a, &b); 		// but mine doesn't ?!?!?!?!!!???
+ 
+  myswap(pointA, pointB); 		// Could either use (&a, &b) or (pointA, pointB)
 
   cout << "After Swap: a = " << a << ", b = " << b << endl;
 
